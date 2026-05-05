@@ -1,0 +1,35 @@
+# ──────────────────────────────────────────────────────────────────────────
+# AIC-2026 MixFormer Tracker — Python dependencies
+#
+# Install:  pip install -r requirements.txt
+#
+# Notes:
+#   • torch / torchvision are NOT listed here; the Dockerfile uses the
+#     official pytorch/pytorch base image which already includes them.
+#     For local installs, install PyTorch 2.2+ from https://pytorch.org first.
+#   • opencv-python-headless is used instead of opencv-python in the Docker
+#     container (no GUI needed there); for local dev either variant works.
+# ──────────────────────────────────────────────────────────────────────────
+
+# MixFormer core requirements
+yacs>=0.1.8
+easydict>=1.10
+einops>=0.7.0
+timm>=0.9.0
+
+# Video / image processing
+opencv-python-headless>=4.8.0
+
+# Data handling & numerics
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.11.0
+
+# Logging / visualisation (MixFormer training)
+tensorboard>=2.14.0
+visdom>=0.2.4
+lmdb>=1.4.0
+jpeg4py>=0.1.4
+
+# Misc utilities used by MixFormer
+gdown>=5.1.0        # checkpoint download helper
